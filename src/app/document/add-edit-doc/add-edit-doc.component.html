@@ -1,0 +1,22 @@
+<div class="form-froup row">
+
+  <label class="col-sm-2 col-form-label">type de document</label>
+  <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="Typedocument"
+      placeholder="Entrez le nom du document">
+    </div>
+    <br><br>
+  <label class="col-sm-2 col-form-label">Date demande</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" [(ngModel)]="dateDemande"
+      >
+  </div>
+</div>
+<br><br>
+<button (click)="addDocument()" *ngIf="doc.DocumentId==0" class="btn btn-primary">
+  ajouter
+</button>
+
+<button (click)="updateDocument()" *ngIf="doc.DocumentId!=0" class="btn btn-primary">
+  Modifier
+</button>
